@@ -47,7 +47,7 @@
             var x = event.clientX - parallaxBox.offsetLeft,
                 y = event.clientY - parallaxBox.offsetTop;
 
-            mouseParallax('00', c00left, c00top, x, y, 0);
+            mouseParallax('00', c00left, c00top, x, y, 5);
         };
 
     };

@@ -37,6 +37,18 @@
     /* ########################################### hero parallax ############################################## */
     window.onload = function () {
 
+        var parallaxBox = document.getElementById('parallax');
+        var
+            c00left = document.getElementById('00').offsetLeft,
+            c00top = document.getElementById('00').offsetTop;
+
+        parallaxBox.onmousemove = function (event) {
+            event = event || window.event;
+            var x = event.clientX - parallaxBox.offsetLeft,
+                y = event.clientY - parallaxBox.offsetTop;
+
+            mouseParallax('00', c00left, c00top, x, y, 0);
+        };
 
     };
 

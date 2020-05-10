@@ -524,6 +524,11 @@ textarea.form-control {
   right: -10px;
 }
 
+#00 {
+  bottom: 30px;
+  right: 75px;
+}
+
 .layer-bg {
   position: absolute;
   bottom: 0;

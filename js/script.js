@@ -36,20 +36,6 @@
 
     /* ########################################### hero parallax ############################################## */
     window.onload = function () {
-
-        var parallaxBox = document.getElementById('parallax');
-        var
-            c00left = document.getElementById('00').offsetLeft,
-            c00top = document.getElementById('00').offsetTop;
-
-        parallaxBox.onmousemove = function (event) {
-            event = event || window.event;
-            var x = event.clientX - parallaxBox.offsetLeft,
-                y = event.clientY - parallaxBox.offsetTop;
-
-            mouseParallax('00', c00left, c00top, x, y, 5);
-        };
-
     };
 
     function mouseParallax(id, left, top, mouseX, mouseY, speed) {
@@ -116,18 +102,17 @@
     var Shuffle = window.Shuffle;
     var jQuery = window.jQuery;
 
-    var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
-        itemSelector: '.shuffle-item',
-        buffer: 1
-    });
+	if(document.querySelector('.shuffle-wrapper')) {
+		var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
+			itemSelector: '.shuffle-item',
+			buffer: 1
+		});
 
-    jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
-        var input = evt.currentTarget;
-        if (input.checked) {
-            myShuffle.filter(input.value);
-        }
-    });
-
-
-
+		jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
+			var input = evt.currentTarget;
+			if (input.checked) {
+				myShuffle.filter(input.value);
+			}
+		});
+	}
 })(jQuery);

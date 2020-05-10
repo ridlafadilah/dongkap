@@ -1,5 +1,5 @@
 .hero-area {
-  padding: 300px 0 200px;
+  padding: 300px 0 100px;
   position: relative;
   @include tablet {
     padding: 250px 0 150px;
@@ -59,6 +59,11 @@
 #l9 {
   bottom: 100px;
   right: -10px;
+}
+
+#00 {
+  bottom: 320px;
+  right: -75px;
 }
 
 .layer-bg {
